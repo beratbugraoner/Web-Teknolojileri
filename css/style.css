@@ -1,0 +1,246 @@
+/* Header */
+.foto {
+	
+	width : 50 px;
+	height:50px;
+	
+}
+.padTop20
+{
+	padding-top:20px;
+	
+}
+
+.pad10
+{
+	
+	padding:10px;
+}
+
+
+.pad15
+{
+	
+	padding:15px;
+}
+
+
+
+.hizala
+{
+
+        text-align= center;
+}
+
+.ozgecmis
+{
+	width: 100%;
+	padding: 0 10% 0 10%;
+	margin: 0 auto 0 auto;
+}
+
+.ozgecmis1
+{
+	width: 200px;
+        height: 200px;
+        position:absolute;
+        left: 55%;
+        top: 10%;
+        margin-right:200px;
+
+}
+
+.ozgecmis2
+{
+	width: 200px;
+        height: 200px;
+        position:absolute;
+        left: 55%;
+        top: 35%;
+        margin-right:200px;
+
+}
+
+.tablo
+{
+  	
+        font-size: 20px;  
+	margin: 0;
+	border-width: 5px;
+
+}
+.tablo1
+{
+  	
+        font-size: 20px;  
+	margin-right:200px;
+        margin-top:50px;
+	
+
+}
+
+.arkaplan
+{
+    background-color:blue;
+
+}
+
+
+.mar0 {
+	
+	margin-bottom: 0px;
+}
+.pad0 {
+	padding :0px;
+	padding-right:5px;
+}
+.padx
+{
+		padding-left:300px;
+}
+
+
+.pull-left {
+    float: left !important;
+}
+
+
+.nav-yuk70{
+	
+	height:65px;
+	
+	
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+/*	max-height:400px */
+}
+
+.fill2 {
+   height:400px;
+/*	max-height:400px */
+}
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+
+
+
+
+
+
+.logo-yani-yazisi {
+
+   float: left !important;
+    font-size: 18px;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-left: 5px;
+	padding-right:50px;
+    margin-top: 6px;
+	
+  
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3%;
+  background-color: #134c7d;
+  color: white;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content {
+  padding: 30px 0;
+}
+
+.about .content h3 {
+  font-weight: 500;
+  font-size: 34px;
+  color: #2c4964;
+}
+
+.about .content p {
+  margin-bottom: 0;
+}
+
+.about .content .count-box {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.about .content .count-box i {
+  display: block;
+  font-size: 36px;
+  color: #eeafca;
+  float: left;
+}
+
+.about .content .count-box span {
+  font-size: 36px;
+  line-height: 20px;
+  display: block;
+  font-weight: 700;
+  color: #2c4964;
+  margin-left: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.about .content .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 50px;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  color: #437099;
+}
+
+.about .content .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #437099;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.about .content .count-box a:hover {
+  color: #6b96be;
+}
+
+
+#slider 
+{ 
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 1000px;
+	height:500px;
+	overflow: hidden;
+}
+
+#kontrol 
+{
+	position: absolute;
+	right: 0;
+	bottom: 5px; 
+}
+ 
+#kontrol a 
+{
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+}
+
+

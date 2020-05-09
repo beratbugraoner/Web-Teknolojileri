@@ -43,88 +43,73 @@ function slaytGoster(slaytNumarası)
 	slayt[slaytNo].style.display = "block";	   
 }
  
- function kontrol()
- {
-	var ad = document.getElementById("ad").value;
-	var soyad = document.getElementById("soyad").value;
-	var email = document.getElementById("email").value;
-	var at = email.indexOf("@");
-    var nokta = email.lastIndexOf(".");
-	var sifre = document.getElementById("sifre").value;
-	var adres = document.getElementById("adres").value;
-	var il = document.getElementById("il").value;
-	var ogrenim = document.getElementById("ogrenim").selectedIndex;
-	
-	if(ad == null || ad == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	} 
 
-    else if(soyad == null || soyad == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
+function isValid(frm)
+{
+    var Ad = frm.Ad.value;
+    var Soyad = frm.Soyad.value;
+    var email = frm.Email.value;
+	var mesaj = frm.Adres.value;
+	var Il = frm.Il.value;
+    var atpos=Email.indexOf("@");
+    var dotpos=Email.lastIndexOf(".");
+    if ( 	Ad==null || Ad=="" || kadi.length < 4 )
+    {
+        alert("Kullanıcı adı 4 karakterden az olamaz");
+        return false;
+    }
+    if ( Soyad == null || Soyad == ""  )
+    {
+        alert("Şifreyi boş bırakmayın");
+        return false;
+    }
+    
+    if ( atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length )
+    {
+        alert("Geçerli email adresi girin");
+        return false;
+    }      
+    return true;
+}
+
+function isValid(frm)
+{
+    var kullanıcıadı = frm.id.value;
+    var sifre1 = frm.sifre1.value;
+	var email = frm.email.value;
+	var sehir = frm.il.value;
+	var secim = frm.cinsiyet.value;
+	var text = frm.mesaj.value;
+
+    if ( kullanıcıadı==null || kullanıcıadı=="" || kullanıcıadı.length < 4 )
+    {
+        alert("Kullanıcı adını 4 karakterden fazla giriniz.");
+        return false;
 	}
-	
-	else if(email == null || email == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
+	if ( email==null || email==""   )
+    {
+        alert("Lütfen e-mail adresini giriniz.");
+        return false;
 	}
-	
-	else if(at < 1 || nokta < at + 2 || nokta + 2 >= email.length)
-	{
-		window.alert('Geçerli email adresi giriniz !!!');
+	if ( sehir==null || sehir==""   )
+    {
+        alert("Lütfen yaşadığınız şehri girin.");
         return false;
 	}
 	
-	else if(sifre == null || sifre == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
+    if ( sifre1 == null || sifre1 == "" || sifre2 == null || sifre2 == "")
+    {
+        alert("Şifreyi boş bırakmayın");
+        return false;
+	}
+	if ( text==null || text==""   )
+    {
+        alert("Lütfen yollamak istediğiniz mesajı yazın.");
+        return false;
 	}
 	
-	else if(adres == null || adres == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	}
 	
-	else if(il == null || il == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	}
-	
-	var tiklanma1 = 0;
-	for(var i = 0; i < document.getElementsByName('Cinsiyet').length; i++)
-	{
-		if(document.getElementsByName('Cinsiyet')[i].checked)
-		{
-			tiklanma1 = 1;
-		}
-	}
-	if(tiklanma1 == 0)
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	}
-	
-	if(ogrenim == "")
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	}
-	
-	var tiklanma2 = 0;
-	if(document.getElementsByName('Kosul')[0].checked)
-	{
-			tiklanma2 = 1;
-	}
-	if(tiklanma2 == 0)
-	{
-		window.alert('Boş alanları doldurunuz !!!');
-		return false;
-	}
- }
+    
+        
+    return true;
+}

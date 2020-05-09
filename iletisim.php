@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -64,39 +65,50 @@
 		 <img src="images/en.png" width="25px" height="25px" title="TÜRKÇE">
 		  </a></li>
 	  </ul>
-      <ul class="nav navbar-nav  navbar-right pad10">
+     
         
-        <li class="nav-item"> <b> <a href="login.html"> <strong>GİRİŞ</strong></a></b>
+      
         
       
      
-       </li>
+       
      </div>
       </div>
       </header>
       
 
-        <div id="panel">
-            <h1>Giriş Yap</h1>
-            <form action="logined.php" class="lol" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                  <input class="input form-control" type="email" placeholder="E-mail giriniz."   name="email" autofocus required > <br>
-                  <input class="input form-control" type="password" placeholder="*******"  name="password" required> <br>
-                  <p><input type="submit" name="submit" value="Giriş Yap" /></p>
-                </div>
-                
-
-                
-                
-            </form>
-            <br>
-             <p>Eğer hesabınız yoksa lütfen <b><a href="register.html">Kayıt Ol'a</a></b> gidiniz.</p>
-
-
-        </div>
         
 
+        <?php
+        if (isset($_POST["submit"])) {
+
+         $id=$_POST['id'];
+         $email=$_POST['email'];
+         $sehir=$_POST['il'];
+         $sifre =$_POST['sifre1'];
+         $cinsiyet =$_POST['cinsiyet'];
+         $ogrenim=$_POST['ogrenim'];
+         $mesaj=$_POST['mesaj'];
+            echo"<br><br><br><br><br>"; 
+            echo" <center>  <h2> Hoşgeldiniz : $id </h2> ";
+            echo" <center>  <h2>E-mailiniz : $email </h2>";
+            echo" <center>  <h2>Yaşadığınız il: $sehir </h2>"  ;
+            echo" <center>  <h2> Cinsiyetiniz : $cinsiyet </h2>"  ;
+            echo" <center>  <h2>Öğrenim durumunuz : $ogrenim </h2>"  ; 
+            echo" <center>  <h2>Mesajınız : $mesaj </h2>" ;
+
+            
+          
+         
+         
+         
+         
+        }
         
+    
+        
+        ?>
+      
     
   
 

@@ -64,39 +64,46 @@
 		 <img src="images/en.png" width="25px" height="25px" title="TÜRKÇE">
 		  </a></li>
 	  </ul>
-      <ul class="nav navbar-nav  navbar-right pad10">
+     
         
-        <li class="nav-item"> <b> <a href="login.html"> <strong>GİRİŞ</strong></a></b>
+      
         
       
      
-       </li>
+       
      </div>
       </div>
       </header>
       
 
-        <div id="panel">
-            <h1>Giriş Yap</h1>
-            <form action="logined.php" class="lol" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                  <input class="input form-control" type="email" placeholder="E-mail giriniz."   name="email" autofocus required > <br>
-                  <input class="input form-control" type="password" placeholder="*******"  name="password" required> <br>
-                  <p><input type="submit" name="submit" value="Giriş Yap" /></p>
-                </div>
-                
-
-                
-                
-            </form>
-            <br>
-             <p>Eğer hesabınız yoksa lütfen <b><a href="register.html">Kayıt Ol'a</a></b> gidiniz.</p>
-
-
-        </div>
         
 
+        <?php
+        if(@$_POST["submit"])
+        $md5sifre = md5($_POST["password"]);
+        {
         
+        
+          if ($_POST["email"] == "b191210066@sakarya.edu.tr" && $md5sifre =="827ccb0eea8a706c4c34a16891f84e7b")
+          {
+            echo" <center> <h2> Giriş yaptınız b191210066! </h2> <br> " ;
+            echo" <center>  <h2> HOŞGELDİNİZ! </h2> ";
+             return true;
+          }
+          else
+          {
+         
+          header("Location:login.html");
+          
+          return true;
+          }
+            
+        
+        
+        }
+        
+        ?>
+      
     
   
 

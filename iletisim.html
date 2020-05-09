@@ -2,20 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
     <title>Berat ÖNER</title>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     
-    
-   
+    <script src="javascript.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Font Awesome CSS -->
-  	
-	  <!-- ek stiller -->
+		
     <link href="css/style.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/javascript.js"></script>
+    
     
     
     
@@ -26,7 +24,7 @@
 
     <header class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -75,57 +73,57 @@
       <ul class="nav navbar-nav  navbar-right pad10">
         
         <li class="nav-item"> <b> <a href="login.html"> <strong>GİRİŞ</strong></a></b>
-        
-      <li class="nav-item">  <b> <a href="register.html"> <strong>KAYIT OL</strong></a></b>
-     
+
        </li>
+      </ul>
      </div>
       </div>
       </header>
 
-  
-            <h1 class="yaziortala">Bizle İletişime Geçin</h1>
-            <form action="">
-                
-                <input class="input" type="text" placeholder="Ad" id="ad" name="Ad"> <br>
-                <input class="input" type="text" placeholder="Soyisim" id="soyad" name="Soyad"> <br>
-                <input class="input" type="email" placeholder="E-mail" id="email" name="Email"> <br>
-                <input class="input" type="password" placeholder="Şifre" id="password" name="Password"> <br>
-                <input class="input" type="text" placeholder="Yaşadığınız il" id="sehir" name="Sehir"> <br>
-                <div class="hizala">
-                  Bize bir mesaj bırakın.<br>
-                    <textarea rows="8" cols="80" id="mesaj" name="Mesaj"></textarea><br><br>
-                </div>
-               
-                <div class="hizala">
-                    ÖĞRENİM DURUMUNUZ:
-                    <select id="ogrenim" name="Ogrenim">
-                      <option value=""></option>
-                      <option value="Ilkokul">İlkokul</option>
-                      <option value="Ortaokul">Ortaokul</option>
-                      <option value="Lise">Lise</option>
-                      <option value="Universite">Üniversite</option>
-                    </select><br><br>
-                </div>
-                <div class="hizala">
-                    CİNSİYETİNİZ: <br>
-                    <input type="radio" id="cinsiyet" name="Cinsiyet" value="Erkek"> Erkek 
-                    <input type="radio" id="cinsiyet" name="Cinsiyet" value="Kadin">  Kadın <br>
-                </div>
-                <div class="hizala">
-                  
-                    <input type="checkbox" id="kosul" name="Kosul" value="Haberler">Haberlerden haberdar olmak istiyorum.<br><br>
-                </div>
-                
-                
-               
-                <div class="hizala">	
-                    <input type="submit" value="Gönder" onclick="return kontrol();">
-                    <input type="reset" value="Temizle"><br><br>
-                    
-                </div>
-                
-            </form>
+      <h1 class="yaziortala">Bizle İletişime Geçin</h1>
+      <form action="iletisim.php" name="uye" method="post" onsubmit="return isValid(this)" enctype="multipart/form-data">
+        <div class="form-group">
+        <input type="text" id name="id" placeholder="Kullanıcı Adı" class="form-control input" >
+        </div>
+        <div class="form-group">
+        <input type="email" name="email" placeholder="Mail Adresi" class="form-control input" >
+        </div>	
+        <div class="form-group">
+          <input class="input form-control" type="text" placeholder="Yaşadığınız il"  name="il" >
+        </div>
+        <div class="form-group">
+        <input type="password" name="sifre1" placeholder="Şifre Giriniz." class="form-control input" >
+        </div>
+        	
+        <div class="hizala "  >
+          CİNSİYETİNİZ: <br>
+          <input type="radio" id="cinsiyet" name="cinsiyet" value="Erkek"> Erkek 
+          <input type="radio" id="cinsiyet" name="cinsiyet" value="Kadin">  Kadın <br>
+       </div>
+       <br>  
+       <div class="hizala" >
+        ÖĞRENİM DURUMUNUZ:
+        <select id="ogrenim" name="ogrenim" >
+          <option value=""></option>
+          <option value="Ilkokul">İlkokul</option>
+          <option value="Ortaokul">Ortaokul</option>
+          <option value="Lise">Lise</option>
+          <option value="Universite">Üniversite</option>
+        </select><br><br>
+        </div>
+        <div class="form-group">
+         <p class="yaziortala"> <strong>Bize bir mesaj bırakın.</strong>  </p> 
+            <textarea class="form-control" rows="8" cols="20" id="mesaj" name="mesaj" required ></textarea><br><br>
+        </div>		
+        <div class="hizala">    
+          <input type="checkbox" id="kosul" name="kosul" value="Haberler">Haberlerden haberdar olmak istiyorum.<br><br>
+       </div>		
+        <div class="hizala">	
+          <input type="submit" name="submit" value="Gönder">
+          <input type="reset" value="Temizle"><br><br>
+          
+       </div>				
+      </form>
             <br><br><br>
          
 
@@ -135,22 +133,24 @@
       
 
 
-      
-    
-  
+     
+        <div class="footer">
+          <div>
+              <a href="https://www.facebook.com/berat.oner.5/" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a  href="https://www.instagram.com/bugraaoner/?hl=tr " target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/beratbugra2" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+              <a><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+           </div>
+       </div>
 
-      
-      <div class="footer">
-        <div>
-            <a><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-            <a><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-         </div>
-     </div>
-
-    
+     <script src="js/javascript.js"></script>
      <script src="vegas/vegas.min.js"></script>
      <script src="js/main.js"></script>
   </body>
